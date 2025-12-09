@@ -10,3 +10,4 @@ WORKDIR /root/
 COPY --from=builder /app/service-b .
 CMD ["./service-b"]
 
+
