@@ -30,3 +30,4 @@ func logMetrics() {
 		serviceMetrics.TotalDuration/time.Duration(serviceMetrics.RequestCount))
 }
 
+

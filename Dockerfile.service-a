@@ -11,3 +11,4 @@ COPY --from=builder /app/service-a .
 CMD ["./service-a"]
 
 
+

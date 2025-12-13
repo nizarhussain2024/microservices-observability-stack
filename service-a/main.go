@@ -8,10 +8,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, `{"status":"healthy","service":"service-a","timestamp":"%s"}`, time.Now().Format(time.RFC3339))
-	})
+	http.HandleFunc("/health", healthCheckHandler)
 
 	http.HandleFunc("/api/data", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
